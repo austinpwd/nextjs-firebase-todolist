@@ -1,32 +1,40 @@
+import { useRouter } from "next/dist/client/router";
 import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "libs/firebase";
+import { useAuth } from "libs/hooks";
 import TextInput from "ui/forms/TextInput";
 import { Button } from "ui/buttons";
 import Login from "./styled";
 
 function UserLogin({ ...props }) {
-    const {email, setEmail} = useState('')
-    const {password, setPassword} = useState('')
+  const { email, setEmail } = useState("");
+  const { password, setPassword } = useState("");
+  const router = useRouter()
+  const user = useAuth();
 
-    async function handleSubmit(e) {
-        e.preventDefault()
+  async function handleSubmit(e) {
+    e.preventDefault();
 
-        const user = await signInWithEmailAndPassword(auth, "jim@home.com", "123456")
-        console.log(user)
+    const isValidUser = await signInWithEmailAndPassword(auth, email, password);
+    if (isValidUser) {
+      router.push('/todo')
     }
+  }
 
   return (
     <>
       <Login {...props} onSubmit={(e) => handleSubmit(e)}>
         <TextInput
           label="Email"
+          onChange={(e) => setEmail(e.currentTarget.value)}
           id="emailAddress"
           placeholder="janedoe@home.com"
           {...props}
         />
         <TextInput
           label="Password"
+          onChange={(e) => setPassword(e.currentTarget.value)}
           type="password"
           id="emailAddress"
           placeholder="use a secure password"
