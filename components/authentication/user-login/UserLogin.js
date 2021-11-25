@@ -2,7 +2,7 @@ import { useRouter } from "next/dist/client/router";
 import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "libs/firebase";
-import { useAuth } from "libs/hooks";
+import { useAuth } from "libs/hooks/useAuth";
 import TextInput from "ui/forms/TextInput";
 import { Button } from "ui/buttons";
 import Login from "./styled";

@@ -1,4 +1,4 @@
-import { Brand } from "../brand" 
+import {Brand} from "../brand"
 import {Bar} from "./styles"
  
 import {UserLoginStatus } from "../authentication/login-status"

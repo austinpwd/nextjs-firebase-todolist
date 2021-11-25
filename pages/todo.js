@@ -1,6 +1,6 @@
-import { useAuth } from "libs/hooks";
-import { AppBar } from "components/appbar";
-import {Title} from "ui/title"
+import { useAuth } from "/libs/hooks/useAuth";
+import { AppBar } from "/components/appbar";
+import {Title} from "/ui/title"
 
 
 function ToDoPage(props) {
@@ -9,7 +9,7 @@ function ToDoPage(props) {
    if (!user) {
      <>
      <AppBar/>
-     <Title>YOU'RE NOT WELCOME HERE. GO AWAY</Title>
+     <Title>YOURE NOT WELCOME HERE. GO AWAY</Title>
      </>
    }
 

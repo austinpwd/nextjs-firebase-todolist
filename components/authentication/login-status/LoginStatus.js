@@ -1,4 +1,4 @@
-import { useAuth } from "libs/hooks";
+import { useAuth } from "libs/hooks/useAuth";
 import { useRouter } from "next/dist/client/router";
 import { signOut } from "@firebase/auth";
 
