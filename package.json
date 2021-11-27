@@ -10,7 +10,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "clean": "rm -rf .next node_modules",
+    "clean:dev": "rm -rf .next node_modules",
+    "clean:git": "rm -rf .next node_modules",
     "lint": "next lint"
   },
   "author": "Austin Doan",

@@ -1,22 +1,22 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Title = styled.h1`
-   font-size: ${props => props.size || "2rem"};;
-   color: ${props => props.color || "#272738"}; 
-   font-weight:600;
-  
-
-`
+  font-size: ${(props) => props.size || "2rem"};
+  color: ${(props) => props.color || "#272738"};
+  font-weight: 600;
+`;
 
 const Tagline = styled.p`
-      font-size:14px;
-` 
-
+  font-size: 14px;
+`;
 
 const TitleAndTagLine = styled.header`
+  & :first-child {
+    ${Title}
+  }
+  & :last-child {
+    ${Tagline}
+  }
+`;
 
-   & :first-child{${Title}}
-   & :last-child{${Tagline}}
-`
-
-export{ Title, Tagline, TitleAndTagLine}
+export { Title, Tagline, TitleAndTagLine };

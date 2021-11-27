@@ -8,7 +8,14 @@ function AppleProvider({ children, ...props }) {
   return (
     <ProviderButton>
       <div>
-        <Image src={apple} layout="fixed" width={24} height={24} quality={30} />
+        <Image
+          src={apple}
+          alt="Login using Apple"
+          layout="fixed"
+          width={24}
+          height={24}
+          quality={30}
+        />
         <span> {children}</span>
       </div>
     </ProviderButton>

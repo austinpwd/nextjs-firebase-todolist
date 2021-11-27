@@ -11,9 +11,6 @@ const PageLayout = styled.div`
     .jim{
         background-color: blue;
     }
-
-    
-    
 `
 
 const PageHeader = styled.header`

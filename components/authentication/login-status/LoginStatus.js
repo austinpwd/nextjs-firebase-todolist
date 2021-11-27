@@ -1,42 +1,40 @@
 import { useAuth } from "libs/hooks/useAuth";
 import { useRouter } from "next/dist/client/router";
 import { signOut } from "@firebase/auth";
-
 import { auth } from "libs/firebase";
 import { IoPersonCircleSharp } from "react-icons/io5";
 import { LoginStatus } from "./styles";
 
 function UserLoginStatus({ size, color, status, ...props }) {
-  //Conditional render logged in
   const user = useAuth();
   const router = useRouter();
-  //Logout Click Handler
   function handleClick() {
-    signOut(auth)
-    .then(() => {
-      //sign out cleanup
-      router.push('/')
-    })
+    signOut(auth).then(() => {
+      router.push("/");
+    });
   }
 
   if (user) {
     return (
-      <LoginStatus {...props} onClick={handleClick} bgcolor="lightgreen"> 
-      <IoPersonCircleSharp size={size || "1.75rem"} color={color || "blue"} />
-      <figcaption>
-        <p>{status}</p>
-        <p>logout</p>
-      </figcaption>
-    </LoginStatus>
-    )
+      <LoginStatus {...props} onClick={handleClick} bgcolor="lightgrey">
+        <IoPersonCircleSharp
+          size={size || "1.75rem"}
+          color={color || "green"}
+        />
+        <figcaption>
+          <p>Logged In</p>
+          <p>Logout</p>
+        </figcaption>
+      </LoginStatus>
+    );
   }
 
   return (
-    <LoginStatus>
+    <LoginStatus bgcolor="lightgrey">
       <IoPersonCircleSharp size={size || "1.75rem"} />
       <figcaption>
-        <p>Status</p>
-        <p>please login</p>
+        <p>Logged Out</p>
+        <p>Please Login</p>
       </figcaption>
     </LoginStatus>
   );

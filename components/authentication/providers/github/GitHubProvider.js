@@ -10,6 +10,7 @@ function GitHubProvider({ children, ...props }) {
       <div>
         <Image
           src={github}
+          alt="Login using GitHub"
           layout="fixed"
           width={24}
           height={24}
