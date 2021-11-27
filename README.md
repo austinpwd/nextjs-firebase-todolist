@@ -1,13 +1,14 @@
-# ToDo App NEXT.js
+# A To-Do List using Next.js and Firebase by Austin Doan.
 
-## SVGR ---> react component
+This application is a To-Do List. It uses the Next.js framework and uses Firebase for user authentication and CRUD actions.
 
-## SVGO ---> optimizer for svg strip needless tag
+## Install
+ In order to run the web app, you will need to install the projects node_modules by running ```npm install```
 
-REACT Icons: https://react-icons.github.io/react-icons/
+## Build
+You will need to build the web application by running ```npm run build```
 
-SVGR: https://react-svgr.com/docs/getting-started/
+## Deployment
+You can start a local instance of the web application by running ```npm start```
 
-Useful Blog: https://www.robinwieruch.de/
-
-Rename
+By default, the instance will bind to ```localhost:3000```. There is an already deployed instance available to view at **<https://austinpwd-todo-app.vercel.app/>**
