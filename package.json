@@ -1,16 +1,16 @@
 {
-  "name": "react-nextjs-firebase-todoapp",
+  "name": "nextjs-firebase-todoapp",
   "version": "1.0.0",
-  "description": "A To-Do app built with React and NextJS, using Firebase for authentication and storage of To Dos",
+  "description": "A To-Do app built with NextJS, using Firebase for authentication and storage of To Dos",
   "repository": {
     "type": "git",
-    "url": "https://github.com/austinpwd/react-nextjs-firebase-todoapp.git"
+    "url": "https://github.com/austinpwd/nextjs-firebase-todoapp.git"
   },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "clean:dev": "rm -rf .next node_modules",
+    "clean:dev": "rm -rf .next",
     "clean:git": "rm -rf .next node_modules",
     "lint": "next lint"
   },
@@ -19,15 +19,16 @@
   "keywords": [
     "react",
     "nextjs",
+    "vercel",
     "firebase",
     "firestore",
-    "to-do list",
+    "to do list",
     "austin doan"
   ],
   "bugs": {
-    "url": "https://github.com/austinpwd/react-nextjs-firebase-todoapp/issues"
+    "url": "https://github.com/austinpwd/nextjs-firebase-todoapp/issues"
   },
-  "homepage": "https://github.com/austinpwd/react-nextjs-firebase-todoapp/#readme",
+  "homepage": "https://github.com/austinpwd/nextjs-firebase-todoapp/#readme",
   "dependencies": {
     "firebase": "^9.3.0",
     "next": "12.0.2",
