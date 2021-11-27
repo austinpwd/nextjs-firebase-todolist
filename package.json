@@ -1,6 +1,11 @@
 {
-  "name": "next-pages-routing",
-  "private": true,
+  "name": "react-nextjs-firebase-todoapp",
+  "version": "1.0.0",
+  "description": "A To-Do app built with React and NextJS, using Firebase for authentication and storage of To Dos",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/austinpwd/react-nextjs-firebase-todoapp.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -8,6 +13,20 @@
     "clean": "rm -rf .next node_modules",
     "lint": "next lint"
   },
+  "author": "Austin Doan",
+  "license": "ISC",
+  "keywords": [
+    "react",
+    "nextjs",
+    "firebase",
+    "firestore",
+    "to-do list",
+    "austin doan"
+  ],
+  "bugs": {
+    "url": "https://github.com/austinpwd/react-nextjs-firebase-todoapp/issues"
+  },
+  "homepage": "https://github.com/austinpwd/react-nextjs-firebase-todoapp/#readme",
   "dependencies": {
     "firebase": "^9.3.0",
     "next": "12.0.2",

@@ -8,17 +8,16 @@ import { Button } from "ui/buttons";
 import Login from "./styled";
 
 function UserLogin({ ...props }) {
-  const { email, setEmail } = useState("");
-  const { password, setPassword } = useState("");
-  const router = useRouter()
-  const user = useAuth();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const router = useRouter();
 
   async function handleSubmit(e) {
     e.preventDefault();
 
     const isValidUser = await signInWithEmailAndPassword(auth, email, password);
     if (isValidUser) {
-      router.push('/todo')
+      router.push('/todo');
     }
   }
 

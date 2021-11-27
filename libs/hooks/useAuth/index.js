@@ -7,8 +7,8 @@ function useAuth() {
     
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
-            if(clientCredential){
-                setUser(clientCredential)
+            if(user){
+                setUser(user)
             } else {
                 setUser(null)
             }
