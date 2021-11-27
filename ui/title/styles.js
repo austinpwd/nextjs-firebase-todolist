@@ -13,4 +13,10 @@ const Tagline = styled.p`
 ` 
 
 
-export{ Title, Tagline}
+const TitleAndTagLine = styled.header`
+
+   & :first-child{${Title}}
+   & :last-child{${Tagline}}
+`
+
+export{ Title, Tagline, TitleAndTagLine}

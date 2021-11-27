@@ -21,10 +21,10 @@ function UserLoginStatus({ size, color, status, ...props }) {
 
   if (user) {
     return (
-      <LoginStatus {...props} onClick={handleClick} bgcolor="darkgreen"> 
+      <LoginStatus {...props} onClick={handleClick} bgcolor="lightgreen"> 
       <IoPersonCircleSharp size={size || "1.75rem"} />
       <figcaption>
-        <p>Success!</p>
+        <p>{status}</p>
         <p>logout</p>
       </figcaption>
     </LoginStatus>
