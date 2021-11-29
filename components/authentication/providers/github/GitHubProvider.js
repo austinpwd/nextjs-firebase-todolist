@@ -1,29 +1,29 @@
 import Image from "next/image";
-import { useRouter } from 'next/dist/client/router';
+import { useRouter } from "next/dist/client/router";
 import { useState } from "react";
-import { GithubAuthProvider, signInWithPopup } from '@firebase/auth';
-import {auth} from '/libs/firebase'
-import { useAuth } from 'libs/hooks/useAuth';
+import { GithubAuthProvider, signInWithPopup } from "@firebase/auth";
+import { auth } from "/libs/firebase";
+import { useAuth } from "libs/hooks/useAuth";
 import { ProviderButton } from "ui/buttons";
 import github from "./github.png";
 
 function GitHubProvider({ children, ...props }) {
-  const [isValidUser, setIsValidUser] = useState(null)
- const user = useAuth();
- const router = useRouter();
- const provider = new GithubAuthProvider()
+  const [isValidUser, setIsValidUser] = useState(null);
+  const user = useAuth();
+  const router = useRouter();
+  const provider = new GithubAuthProvider();
 
- async function signIn() {
-   setIsValidUser(await signInWithPopup(auth, provider))
- }
+  async function signIn() {
+    setIsValidUser(await signInWithPopup(auth, provider));
+  }
 
- function handleClick() {
-   signIn()
- }
+  function handleClick() {
+    signIn();
+  }
 
- if(isValidUser) {
-   router.push('/todo')
- }
+  if (isValidUser) {
+    router.push("/todo");
+  }
 
   return (
     <ProviderButton {...props} onClick={handleClick}>
