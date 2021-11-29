@@ -14,7 +14,7 @@ function TwitterProvider({ children, ...props }) {
   const provider = new TwitterAuthProvider();
 
   async function signIn() {
-    setIsValidUser(await signInWithPopup(auth, provider));
+    setIsValidUser(await signInWithPopup(auth, provider))
   }
 
   function handleClick() {

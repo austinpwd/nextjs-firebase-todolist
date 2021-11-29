@@ -1,1 +1,1 @@
-export {Legal, HighLight} from './styles'
+export {Legal, HighlightContainer, HighLight} from './styles'
