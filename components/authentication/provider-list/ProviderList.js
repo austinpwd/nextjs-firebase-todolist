@@ -21,7 +21,7 @@ function ProviderList(props) {
         <AppleProvider {...props}>With Apple</AppleProvider>
       </Provider>
       <Provider>
-        <TwitterProvider {...props}>With Twiter</TwitterProvider>
+        <TwitterProvider {...props}>With Twitter</TwitterProvider>
       </Provider>
       <Provider>
         <FaceBookProvider {...props}>With Facebook</FaceBookProvider>

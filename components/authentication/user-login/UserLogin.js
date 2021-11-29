@@ -2,14 +2,13 @@ import { useRouter } from "next/dist/client/router";
 import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "libs/firebase";
-import { useAuth } from "libs/hooks/useAuth";
 import TextInput from "ui/forms/TextInput";
 import { Button } from "ui/buttons";
 import Login from "./styled";
 
 function UserLogin({ ...props }) {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
   const router = useRouter();
 
   async function handleSubmit(e) {
