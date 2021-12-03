@@ -33,9 +33,6 @@ function index() {
           <GoogleProvider style={{ marginBottom: "1.5rem" }}>
             With Google
           </GoogleProvider>
-          <TwitterProvider style={{ marginBottom: "1.5rem" }}>
-            With Twitter
-          </TwitterProvider>
           <Spacer className="spacing">OR</Spacer>
           <UserLogin />
         </PageBody>

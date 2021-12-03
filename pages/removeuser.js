@@ -1,23 +1,36 @@
-import { useAuth } from "/libs/hooks/useAuth";
 import { AppBar } from "/components/appbar";
 import { Title } from "/ui/title";
+import { Legal, HighlightContainer, HighLight } from "/ui/legal";
+import {
+  PageLayout,
+  PageHeader,
+  PageFooter,
+  PageBody,
+} from "/layouts/loginpage";
 
-function RemoveUser(props) {
-  const user = useAuth();
 
-  if (!user) {
-    <>
-      <AppBar />
-      <Title>YOURE NOT WELCOME HERE. GO AWAY</Title>
-    </>;
-  }
-
+function removeuser() {
   return (
     <>
       <AppBar />
-      <Title>Render To-Do List</Title>
+      <PageLayout>
+        <PageHeader>
+          <Title>Remove your Account</Title>
+        </PageHeader>
+        <PageBody>
+
+        </PageBody>
+        <PageFooter>
+          <Legal>
+            <HighlightContainer>
+              <HighLight>Terms and Conditions</HighLight>
+              <HighLight>Privacy Policy</HighLight>
+              </HighlightContainer>
+          </Legal>
+        </PageFooter>
+      </PageLayout>
     </>
   );
 }
 
-export default RemoveUser;
+export default removeuser;
