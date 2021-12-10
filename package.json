@@ -31,17 +31,18 @@
   "homepage": "https://github.com/austinpwd/nextjs-firebase-todoapp/#readme",
   "dependencies": {
     "firebase": "^9.3.0",
-    "next": "12.0.2",
+    "next": "^12.0.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-firebase-hooks": "^4.0.1",
     "react-icons": "^4.3.1",
     "styled-components": "^5.3.3",
-    "swr": "^1.0.1"
+    "swr": "^1.0.1",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "@svgr/cli": "^6.1.1",
     "babel-plugin-styled-components": "^2.0.1",
-    "@svgr/cli": "^3.1.0",
     "eslint": "7.32.0",
     "eslint-config-next": "12.0.2",
     "sass": "^1.43.4"

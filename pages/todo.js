@@ -1,6 +1,7 @@
 import { useAuth } from "/libs/hooks/useAuth";
 import { AppBar } from "/components/appbar";
 import { Title } from "/ui/title";
+import Link from "next/link";
 
 function ToDoPage(props) {
   const user = useAuth();
@@ -16,6 +17,9 @@ function ToDoPage(props) {
     <>
       <AppBar />
       <Title>Render To-Do List</Title>
+        <Link href="/add-todo">
+        <a>Add New To Do Item</a>
+    </Link>
     </>
   );
 }
