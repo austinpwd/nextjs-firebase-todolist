@@ -19,7 +19,7 @@ function ToDoPage(props) {
       <PageLayout>
         <PageHeader>
           <Title>User To Do List</Title>
-          <Link href="/add-todo">
+          <Link href="/add-item">
             <a>Add New To Do</a>
           </Link>
         </PageHeader>
