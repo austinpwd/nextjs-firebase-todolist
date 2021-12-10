@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Link from 'next/link'
 import { v4 as uuid } from "uuid";
 import { IoIosArrowRoundBack } from "react-icons/io";
-import {doc, getDoc, setDoc} from "firebase/firestore";
+import {doc, getDoc, updateDoc} from "firebase/firestore";
 import {db} from "libs/firebase";
 import { useAuth } from "libs/hooks/useAuth";
 import { AppBar } from "components/appbar";
@@ -29,9 +29,9 @@ function AddItemPage(props) {
   if (user) {
     const docPath = `todos/${user.uid}`;
     const docRef = doc(db, docPath);
-    await setDoc(docRef, newToDo);
-    await getDoc(docRef);
-    console.log(newToDo);
+    await updateDoc(docRef, newToDo);
+    const todos = await getDoc(docRef);
+    console.log(todos.data());
   }
   
  }
