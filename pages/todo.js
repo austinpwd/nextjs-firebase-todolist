@@ -1,8 +1,8 @@
 import { useAuth } from "/libs/hooks/useAuth";
 import { AppBar } from "/components/appbar";
+import { PageLayout, PageHeader } from "layouts/loginpage";
 import { Title } from "/ui/title";
 import Link from "next/link";
-
 function ToDoPage(props) {
   const user = useAuth();
 
@@ -16,10 +16,14 @@ function ToDoPage(props) {
   return (
     <>
       <AppBar />
-      <Title>Render To-Do List</Title>
-        <Link href="/add-todo">
-        <a>Add New To Do Item</a>
-    </Link>
+      <PageLayout>
+        <PageHeader>
+          <Title>User To Do List</Title>
+          <Link href="/add-todo">
+            <a>Add New To Do</a>
+          </Link>
+        </PageHeader>
+      </PageLayout>
     </>
   );
 }
